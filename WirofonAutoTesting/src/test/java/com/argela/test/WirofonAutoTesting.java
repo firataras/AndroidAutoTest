@@ -32,7 +32,7 @@ public class WirofonAutoTesting {
 	}
 
 	@Test(priority = 2, groups = "Test")
-	public void WelcomePage() {
+	public void WarnningPage() {
 		FirstWelcomePage.checkAllButons(driver);
 	}
 
