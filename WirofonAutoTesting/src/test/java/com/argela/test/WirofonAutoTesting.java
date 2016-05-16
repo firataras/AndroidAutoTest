@@ -57,7 +57,7 @@ public class WirofonAutoTesting {
 
 	}
 
-	@Test(priority = 5, groups = "Test")
+	@Test(priority = 6, groups = "Test")
 	public void LogInwithCotrrectPassword() {
 	
 		username= "canmor";
