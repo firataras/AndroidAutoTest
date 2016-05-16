@@ -1,14 +1,14 @@
 package LoginPage;
 import java.util.List;
 
-import AppUtil.Enumarations;
 import AppUtil.SpesificMobilElement;
+import WirofonEnumarationList.GirisYapPage;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class BaglaniyorPage {
 
-	public static  boolean checkUsernameInProgressbarPage(AndroidDriver<MobileElement> driver,Enumarations enumaration, String username){
+	public static  boolean checkUsernameInProgressbarPage(AndroidDriver<MobileElement> driver,GirisYapPage enumaration, String username){
 		
 		System.out.println("Progress Bar'da donen username =" + SpesificMobilElement.returnText(driver, enumaration) );
 		System.out.println("Olmasi gereken username ise " + username );
@@ -26,7 +26,7 @@ public class BaglaniyorPage {
 			boolean result;
 			do {
 				System.out.print(".");
-				List<MobileElement> local_layouts = SpesificMobilElement.getLayouts(driver, Enumarations.BaglaniyorProgressBar);
+				List<MobileElement> local_layouts = SpesificMobilElement.getLayouts(driver, GirisYapPage.BaglaniyorProgressBar);
 				if (local_layouts.size() != 0) {
 					result = local_layouts.get(0).isDisplayed();
 				} else {

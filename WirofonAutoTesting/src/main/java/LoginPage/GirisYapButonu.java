@@ -1,7 +1,7 @@
 package LoginPage;
 
-import AppUtil.Enumarations;
 import AppUtil.SpesificMobilElement;
+import WirofonEnumarationList.Enumarations;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 

@@ -7,15 +7,14 @@ import org.testng.annotations.Test;
 import com.beust.jcommander.Parameters;
 
 import AppUtil.AppUtil;
-import AppUtil.Enumarations;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 import ContactsPage.*;
 import MessagePage.ButtonSelection;
 import WelcomePage.FirstWelcomePage;
+import WirofonEnumarationList.Enumarations;
 import AppUtil.SpesificMobilElement;
-import AppUtil.Enumarations;
 
 
 
@@ -32,7 +31,7 @@ public class WirofonAutoTesting {
 	}
 
 	@Test(priority = 2, groups = "Test")
-	public void WarnningPage() {
+	public void WarningPage() {
 		FirstWelcomePage.checkAllButons(driver);
 	}
 

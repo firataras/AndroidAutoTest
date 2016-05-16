@@ -1,17 +1,6 @@
-package AppUtil;
-import java.util.List;
+package WirofonEnumarationList;
 
-
-public enum Enumarations {
-
-	//First Welcome Page Warning Page Enumarations
-	WarnningMessage(0, "Kullanmakta olduğunuz cihazın yazılımı değiştirilmiştir. Bu durum cihazınızı, iletişim mahremiyetinize zarar verebilecek saldırılara açık hale getirmektedir. Devam etmek istiyor musunuz?", "android.widget.ImageView", "tr.com.argela.client.android.phone.wirofon",null),
-	YesButtonOnWarnningMessage(0, "Evet", "android.widget.Button","tr.com.argela.client.android.phone.wirofon",null),
-	NoButtonOnWarnningMessage(1, "Hayır", "android.widget.Button", "tr.com.argela.client.android.phone.wirofon",null),
-	
-	//GirisYapButon ve Hesap Olustur Buton Sayfasi  
-	GirisYapButton(0, "Giriş Yap","android.widget.Button", "tr.com.argela.client.android.phone.wirofon",null),
-	HesapOlusturButton(0, "Hesap Oluştur", "android.widget.Button", "tr.com.argela.client.android.phone.wirofon",null), 
+public enum GirisYapPage {
 	
 	//GirisYap Sayfasi 
 	GirisYapTextView(2, "Giriş Yap","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
@@ -37,46 +26,45 @@ public enum Enumarations {
 	HataliSifreWirofonIcon(0, "Wirofon","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
 	HataliSifreAciklamaTextView(0, "3 defa arka arkaya yanlış şifre girdiğiniz için hesabınız 15 dakika boyunca bloke edilmiştir. 15 dakika sonra tekrar deneyiniz ya da şifrenizi www.wirofon.com üzerinden güncelleyiniz","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
 	HataliSifreTamamButonu(0, "Tamam","android.widget.Button", "tr.com.argela.client.android.phone.wirofon",null),
-	HataliSifreYardimButonu(1, "Yardım","android.widget.Button", "tr.com.argela.client.android.phone.wirofon",null),
-	
-	
-	EndOfEnumarations(0, null, "android.widget.ImageView", "tr.com.argela.client.android.phone.wirofon",null);
-	
-	
-	private int index;
-	private String text;
-	private String clas;
-	private String paket;
-	private String content_desc;
+	HataliSifreYardimButonu(1, "Yardım","android.widget.Button", "tr.com.argela.client.android.phone.wirofon",null);			
+			
+			private int index;
+			private String text;
+			private String clas;
+			private String paket;
+			private String content_desc;
 
-	private Enumarations(int index, String text,String clas,String paket, String content_desc) {
-		
-		System.setProperty("file.encoding", "ISO-8859-1");
-		this.index = index;
-		this.text = text;
-		this.clas = clas;
-		this.paket = paket;
-		this.content_desc = content_desc;
+			private GirisYapPage(int index, String text,String clas,String paket, String content_desc) {
+				
+				System.setProperty("file.encoding", "ISO-8859-1");
+				this.index = index;
+				this.text = text;
+				this.clas = clas;
+				this.paket = paket;
+				this.content_desc = content_desc;
+			}
+			public int getIndex() {
+				System.setProperty("file.encoding", "ISO-8859-1");
+				return index;
+			}
+			public String getText() {
+				System.setProperty("file.encoding", "ISO-8859-1");
+				return text;
+			}
+			public String getClas() {
+				System.setProperty("file.encoding", "ISO-8859-1");
+				return clas;
+			}
+			public String getPackage() {
+				System.setProperty("file.encoding", "ISO-8859-1");
+				return paket;
+			}
+			public String getContent_desc() {
+				System.setProperty("file.encoding", "ISO-8859-1");
+				return content_desc;
+			}
+
 	}
-	public int getIndex() {
-		System.setProperty("file.encoding", "ISO-8859-1");
-		return index;
-	}
-	public String getText() {
-		System.setProperty("file.encoding", "ISO-8859-1");
-		return text;
-	}
-	public String getClas() {
-		System.setProperty("file.encoding", "ISO-8859-1");
-		return clas;
-	}
-	public String getPackage() {
-		System.setProperty("file.encoding", "ISO-8859-1");
-		return paket;
-	}
-	public String getContent_desc() {
-		System.setProperty("file.encoding", "ISO-8859-1");
-		return content_desc;
-	}
-	
-}
+
+
+
