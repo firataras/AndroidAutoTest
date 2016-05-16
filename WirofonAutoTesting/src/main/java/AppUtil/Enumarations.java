@@ -1,5 +1,4 @@
 package AppUtil;
-import java.util.List;
 
 
 public enum Enumarations {

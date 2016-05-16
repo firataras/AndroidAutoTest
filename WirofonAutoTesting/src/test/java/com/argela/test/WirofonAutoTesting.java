@@ -1,21 +1,14 @@
 package com.argela.test;
 
-
-import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import com.beust.jcommander.Parameters;
 
-import AppUtil.AppUtil;
-import AppUtil.Enumarations;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
-
-import ContactsPage.*;
-import MessagePage.ButtonSelection;
 import WelcomePage.FirstWelcomePage;
-import AppUtil.SpesificMobilElement;
-import AppUtil.Enumarations;
+import AppUtil.*;
+
+
 
 
 
@@ -25,8 +18,11 @@ public class WirofonAutoTesting {
 
 	private static AndroidDriver<MobileElement> driver;
 	private static Enumarations enumaration;
-	private static String lusername= "firat";
-	private static String lpassword = "1234";
+	private static String username="";
+	private static String password="";
+	
+	
+
 
 	@Test(priority = 1, groups = "Test")
 	public void getDriver() {
@@ -48,16 +44,31 @@ public class WirofonAutoTesting {
 		LoginPage.HesapOlusturButonu.test(driver);
 	}
 
-	@Test(priority = 4, groups = "Test")
-	public void LogIn() {
-		LoginPage.GirisYapEkrani.login(driver, lusername, lpassword);
-		LoginPage.BaglaniyorPage.checkUsernameInProgressbarPage(driver, enumaration.BaglaniyorKullaniciAdiTextView  , lusername);
+	@Test(priority = 5, groups = "Test")
+	public void LogInwithWrongPassword() {
+	
+		username= "firat";
+		password= "1234";
+		LoginPage.GirisYapButonu.click(driver);
+		LoginPage.GirisYapEkrani.login(driver, username, password);
+		LoginPage.BaglaniyorPage.checkUsernameInProgressbarPage(driver, Enumarations.BaglaniyorKullaniciAdiTextView  , username);
 		LoginPage.BaglaniyorPage.waiting(driver);
-		LoginPage.BaglaniyorPage.checkLoginStatus(driver, lusername, lpassword);
+		LoginPage.BaglaniyorPage.checkLoginStatus(driver, username, password);
 
 	}
 
+	@Test(priority = 5, groups = "Test")
+	public void LogInwithCotrrectPassword() {
+	
+		username= "canmor";
+		password = "Ar234567";
+		LoginPage.GirisYapButonu.click(driver);
+		LoginPage.GirisYapEkrani.login(driver, username, password);
+		LoginPage.BaglaniyorPage.checkUsernameInProgressbarPage(driver, Enumarations.BaglaniyorKullaniciAdiTextView  , username);
+		LoginPage.BaglaniyorPage.waiting(driver);
+		LoginPage.BaglaniyorPage.checkLoginStatus(driver, username, password);
 
+	}
 
 }
 
