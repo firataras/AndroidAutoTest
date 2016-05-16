@@ -8,8 +8,8 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import WelcomePage.FirstWelcomePage;
 import AppUtil.*;
-import WirofonEnumarationList.Enumarations;
-import AppUtil.SpesificMobilElement;
+
+
 
 
 
@@ -52,7 +52,7 @@ public class WirofonAutoTesting {
 		password= "1234";
 		LoginPage.GirisYapButonu.click(driver);
 		LoginPage.GirisYapEkrani.login(driver, username, password);
-		LoginPage.BaglaniyorPage.checkUsernameInProgressbarPage(driver, Enumarations.BaglaniyorKullaniciAdiTextView  , username);
+		LoginPage.BaglaniyorPage.checkUsernameInProgressbarPage(driver, enumaration.BaglaniyorKullaniciAdiTextView  , username);
 		LoginPage.BaglaniyorPage.waiting(driver);
 		LoginPage.PopupNotification.check(driver);
 
@@ -65,7 +65,7 @@ public class WirofonAutoTesting {
 		password = "Ar234567";
 		LoginPage.GirisYapButonu.click(driver);
 		LoginPage.GirisYapEkrani.login(driver, username, password);
-		LoginPage.BaglaniyorPage.checkUsernameInProgressbarPage(driver, Enumarations.BaglaniyorKullaniciAdiTextView  , username);
+		LoginPage.BaglaniyorPage.checkUsernameInProgressbarPage(driver, enumaration.BaglaniyorKullaniciAdiTextView  , username);
 		LoginPage.BaglaniyorPage.waiting(driver);
 		LoginPage.PopupNotification.check(driver);
 

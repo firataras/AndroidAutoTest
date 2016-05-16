@@ -1,30 +1,28 @@
 package AppUtil;
 
 import java.util.List;
-
-import WirofonEnumarationList.Enum;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 public class SpesificMobilElement {
 
-	public static void clickByIndex(AndroidDriver<MobileElement> driver, Enum enumaration) {
-		driver.findElementsByClassName(enumaration.getClas()).get(enumaration.getIndex()).click();
+	public static void clickByIndex(AndroidDriver<MobileElement> driver,Enumarations enumaration) {
+		driver.findElementsByClassName(enumaration.getClas	()).get(enumaration.getIndex()).click();
 		System.out.println("This " + enumaration + " button and the " + enumaration.getClas().toString()
 				+ " of class was found and " + enumaration.getIndex() + " id index was clicked.");
 	}
-	public static void clickByText(AndroidDriver<MobileElement> driver, Enum enumaration) {
+	public static void clickByText(AndroidDriver<MobileElement> driver, Enumarations enumaration) {
 		driver.findElementByName(enumaration.getText()).click();
 		System.out.println("This " + enumaration + " button and the " + enumaration.getClas().toString()
 				+ " of class was found and " + enumaration.getText() + "  was clicked.");
 	}
-	public static void sendKeys(AndroidDriver<MobileElement> driver, Enum enumaration, String value){
+	public static void sendKeys(AndroidDriver<MobileElement> driver, Enumarations enumaration, String value){
 		driver.findElementsByClassName(enumaration.getClas()).get(enumaration.getIndex()).sendKeys(value);
 		System.out.println("This " + enumaration + " text box  and the " + enumaration.getClas().toString()
 				+ " of class was found and " + enumaration.getText() + " text was inserted.");
 	}
 	
-	public static void print(AndroidDriver<MobileElement> driver, Enum enumaration) {
+	public static void print(AndroidDriver<MobileElement> driver, Enumarations enumaration) {
 		System.setProperty("file.encoding", "ISO-8859-1");
 		System.out.println(driver.findElementsByClassName(enumaration.getClas()).get(enumaration.getIndex()).toString()
 				+ " || " + driver.findElementsByClassName(enumaration.getClas()).get(enumaration.getIndex()).getTagName()
@@ -33,7 +31,7 @@ public class SpesificMobilElement {
 				+ " || " + driver.findElementsByClassName(enumaration.getClas()).get(enumaration.getIndex()).getId());
 	}
 	
-	public static void clickByContentDesc(AndroidDriver<MobileElement> driver, Enum enumaration) {
+	public static void clickByContentDesc(AndroidDriver<MobileElement> driver, Enumarations enumaration) {
 		List<MobileElement> LocalMobileElementList = getLayouts (driver,enumaration);
 		for (int i=0; i< LocalMobileElementList.size(); i++)
 		{	String local_content_desc =  LocalMobileElementList.get(i).getAttribute("name");
@@ -48,15 +46,15 @@ public class SpesificMobilElement {
 		}
 	
 	}	
-	public static List<MobileElement> getLayouts(AndroidDriver<MobileElement> driver, Enum enumaration) {
+	public static List<MobileElement> getLayouts(AndroidDriver<MobileElement> driver, Enumarations enumaration) {
 		return driver.findElementsByClassName(enumaration.getClas());
 	}	
 
-	public static int size(AndroidDriver<MobileElement> driver, Enum enumaration) {
+	public static int size(AndroidDriver<MobileElement> driver, Enumarations enumaration) {
 		return driver.findElementsByClassName(enumaration.getClas()).size();
 	}
 
-	public static String  returnText(AndroidDriver<MobileElement> driver, Enum enumaration) {
+	public static String  returnText(AndroidDriver<MobileElement> driver, Enumarations enumaration) {
 		return driver.findElementByClassName(enumaration.getClas()).getText();
 	}
 

@@ -3,8 +3,9 @@ package LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import AppUtil.Enumarations;
 import AppUtil.SpesificMobilElement;
-import WirofonEnumarationList.Enumarations;
+
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
