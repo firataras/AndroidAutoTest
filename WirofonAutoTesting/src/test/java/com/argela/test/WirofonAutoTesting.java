@@ -3,12 +3,13 @@ package com.argela.test;
 import org.testng.annotations.Test;
 
 
+
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import WelcomePage.FirstWelcomePage;
 import AppUtil.*;
-
-
+import WirofonEnumarationList.Enumarations;
+import AppUtil.SpesificMobilElement;
 
 
 
@@ -30,7 +31,7 @@ public class WirofonAutoTesting {
 	}
 
 	@Test(priority = 2, groups = "Test")
-	public void WelcomePage() {
+	public void WarningPage() {
 		FirstWelcomePage.checkAllButons(driver);
 	}
 
