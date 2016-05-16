@@ -25,6 +25,8 @@ public class WirofonAutoTesting {
 
 	private static AndroidDriver<MobileElement> driver;
 	private static Enumarations enumaration;
+	private static String lusername= "firat";
+	private static String lpassword = "1234";
 
 	@Test(priority = 1, groups = "Test")
 	public void getDriver() {
@@ -37,21 +39,26 @@ public class WirofonAutoTesting {
 	}
 
 	@Test(priority = 3, groups = "Test")
-	public void LogIn() {
-		String lusername = "firat";
-		String lpassword = "1234";
+	public void GirisYapButtonTest() {
 		LoginPage.GirisYapButonu.test(driver);
+	}
+	
+	@Test(priority = 4, groups = "Test")
+	public void HesapOlusturButtonTest() {
 		LoginPage.HesapOlusturButonu.test(driver);
-		LoginPage.GirisYapButonu.click(driver);
+	}
+
+	@Test(priority = 4, groups = "Test")
+	public void LogIn() {
 		LoginPage.GirisYapEkrani.login(driver, lusername, lpassword);
 		LoginPage.BaglaniyorPage.checkUsernameInProgressbarPage(driver, enumaration.BaglaniyorKullaniciAdiTextView  , lusername);
 		LoginPage.BaglaniyorPage.waiting(driver);
 		LoginPage.BaglaniyorPage.checkLoginStatus(driver, lusername, lpassword);
-		
-		
 
 	}
 
 
 
 }
+
+
