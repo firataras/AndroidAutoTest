@@ -47,7 +47,8 @@ public class AppUtil {
 	private  AndroidDriver<MobileElement> setUp() throws MalformedURLException{
 		AndroidDriver<MobileElement> driver;
 		//File app = new File("/Users/ismailfirataras/Documents/ARGELA_PROJECT/TestAutomation/Chi-Gap-Client-0.3.0-rc38.apk");
-		File app = new File("/Users/ismailfirataras/Documents/ARGELA_PROJECT/TestAutomation/Wirofon-Client-2.0.0-rc04.apk");	
+		//File app = new File("/Users/ismailfirataras/Documents/ARGELA_PROJECT/TestAutomation/Wirofon-Client-2.0.0-rc04.apk");
+		File app = new File("C:\\Users\\gurkanca\\Documents\\workspace\\Wirofon_Apk\\Wirofon-Client-2.0.0-rc04.apk");
 		DesiredCapabilities dc = new DesiredCapabilities();
 		System.out.println("---------------Setting Capabilities-----------------");
 		dc.setCapability("browserName","");
