@@ -24,6 +24,14 @@ public class HataliSifre {
 		}
 		return local_flag;
 	}
+	
+	public static void  click_Tamam(AndroidDriver<MobileElement> driver){
+		SpesificMobilElement.clickByText(driver, Enumarations.HataliSifreTamamButonu);
+	}
+	public static void  click_Yardim(AndroidDriver<MobileElement> driver){
+		SpesificMobilElement.clickByText(driver, Enumarations.HataliSifreYardimButonu);
+	}
+
 }
 
 

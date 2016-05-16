@@ -36,31 +36,9 @@ public class BaglaniyorPage {
 			System.out.println("Progress bar donusu tamamlandi.Login success/fail kontrolu yapilacak..");
 		}
 
-	public static  boolean checkLoginStatus(AndroidDriver<MobileElement> driver,String Username, String Password){
-
-		System.out.println("Login sonrasi durum degerlendiriliyor ... ");
-		if(LoginPage.GeciciSistemHatasi.check(driver))
-		{	
-			return false;
-		}
-		
-		else if (LoginPage.HataliSifre.check(driver))
-		{
-			return false;
-		}
-		else if (LoginPage.NoResponsefromServer.check(driver))
-		{
-			return false;
-		}
-		
-		else 
-		{
-			System.out.println("Login basarilidir. Kullanici adi= "+Username+"Sifre ="+Password+"˛ekilnde girilerek login olunmu˛tur.");
-			return true;
-		}
-
-	} 
 	
+
+
 		
 }
 	

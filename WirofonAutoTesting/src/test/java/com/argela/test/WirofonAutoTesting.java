@@ -53,12 +53,12 @@ public class WirofonAutoTesting {
 		LoginPage.GirisYapEkrani.login(driver, username, password);
 		LoginPage.BaglaniyorPage.checkUsernameInProgressbarPage(driver, Enumarations.BaglaniyorKullaniciAdiTextView  , username);
 		LoginPage.BaglaniyorPage.waiting(driver);
-		LoginPage.BaglaniyorPage.checkLoginStatus(driver, username, password);
+		LoginPage.PopupNotification.check(driver);
 
 	}
 
 	@Test(priority = 6, groups = "Test")
-	public void LogInwithCotrrectPassword() {
+	public void LogInwithCorrectPassword() {
 	
 		username= "canmor";
 		password = "Ar234567";
@@ -66,7 +66,8 @@ public class WirofonAutoTesting {
 		LoginPage.GirisYapEkrani.login(driver, username, password);
 		LoginPage.BaglaniyorPage.checkUsernameInProgressbarPage(driver, Enumarations.BaglaniyorKullaniciAdiTextView  , username);
 		LoginPage.BaglaniyorPage.waiting(driver);
-		LoginPage.BaglaniyorPage.checkLoginStatus(driver, username, password);
+		LoginPage.PopupNotification.check(driver);
+
 
 	}
 

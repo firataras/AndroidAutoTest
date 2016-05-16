@@ -3,6 +3,9 @@ package AppUtil;
 
 public enum Enumarations {
 
+	//GenericEnumarations
+	android_widget_TextView(0, null,"android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
+	
 	//First Welcome Page Warning Page Enumarations
 	WarnningMessage(0, "Kullanmakta olduğunuz cihazın yazılımı değiştirilmiştir. Bu durum cihazınızı, iletişim mahremiyetinize zarar verebilecek saldırılara açık hale getirmektedir. Devam etmek istiyor musunuz?", "android.widget.ImageView", "tr.com.argela.client.android.phone.wirofon",null),
 	YesButtonOnWarnningMessage(0, "Evet", "android.widget.Button","tr.com.argela.client.android.phone.wirofon",null),

@@ -24,5 +24,13 @@ public class GeciciSistemHatasi {
 		}
 		return local_flag;
 	}
+
+	public static void  click_Tamam(AndroidDriver<MobileElement> driver){
+		SpesificMobilElement.clickByText(driver, Enumarations.GeciciSistemHatasiTamam);
+	}
+	public static void  click_Yardim(AndroidDriver<MobileElement> driver){
+		SpesificMobilElement.clickByText(driver, Enumarations.GeciciSistemHatasiYardim);
+	}
+
 }
 
