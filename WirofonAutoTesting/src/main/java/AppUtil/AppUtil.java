@@ -45,23 +45,57 @@ public class AppUtil {
 		}
 	}
 	private  AndroidDriver<MobileElement> setUp() throws MalformedURLException{
+		System.out.println("---------------Getting Test Folders and Mobile App Version-----------------");
 		AndroidDriver<MobileElement> driver;
-		//File app = new File("/Users/ismailfirataras/Documents/ARGELA_PROJECT/TestAutomation/Chi-Gap-Client-0.3.0-rc38.apk");
-		//File app = new File("/Users/ismailfirataras/Documents/ARGELA_PROJECT/TestAutomation/Wirofon-Client-2.0.0-rc04.apk");
-		File app = new File("C:\\Users\\gurkanca\\Documents\\workspace\\Wirofon_Apk\\Wirofon-Client-2.0.0-rc04.apk");
+		UsersEnumaration usersEnumaration = null;
+		TestingApp testingapp = null;
+		String testingfolder = null;
+		String mobileappname= null ;
+		System.out.println("Test edilecek mobile application ile ilgili bilgiler ..... ");
+		String computer_username= System.getProperty("user.name");
+		System.out.println("Test kosulan bilgisayarin kullanici adi = " + computer_username);
+		testingfolder=usersEnumaration.valueOf(computer_username).getFilepath();
+		System.out.println("Yukun alindigi folder = " + testingfolder);
+		mobileappname=testingapp.targetapplication.getVersion();
+		System.out.println("Test edilecek version= "+ mobileappname);
+		File app = new File (testingfolder+mobileappname);
+		System.out.println("----------------------------------------------------------------------------");
+		System.out.println("                                                                             ");
+
+		System.out.println("---------------Setting Appium Capabilities-----------------");
+		AppiumCapabilities appcap = null;
+		
+		//Hangi capability istenirse onun indexini buraya yazmak lazim
+		int local_capability_index =0;  
+		
 		DesiredCapabilities dc = new DesiredCapabilities();
-		System.out.println("---------------Setting Capabilities-----------------");
-		dc.setCapability("browserName","");
-		dc.setCapability("platformName", "Android");
-		dc.setCapability("platformVersion", "4.2.2");
-		dc.setCapability("deviceName","CustomPhone4.2.2_API17");
-		dc.setCapability("fullReset", false);
-		dc.setCapability("app-Package", " tr.com.argela.client.android.phone.wirofon");
-		System.out.println("APK path:"+app.getAbsolutePath());
+		
+		dc.setCapability("browserName",appcap.values()[local_capability_index].getBrowserName());
+		System.out.println("Appium dc browserName :" + appcap.values()[local_capability_index].getBrowserName());
+		
+		dc.setCapability("platformName", appcap.values()[local_capability_index].getPlatformName());
+		System.out.println("Appium dc platformName :" + appcap.values()[local_capability_index].getPlatformName());
+
+		dc.setCapability("platformVersion",appcap.values()[local_capability_index].getPlatformVersion());
+		System.out.println("Appium dc platformVersion :" + appcap.values()[local_capability_index].getPlatformVersion());
+
+		dc.setCapability("deviceName",appcap.values()[local_capability_index].getDeviceName());
+		System.out.println("Appium dc deviceName :" + appcap.values()[local_capability_index].getDeviceName());
+
+		dc.setCapability("fullReset", appcap.values()[local_capability_index].getFullReset());
+		System.out.println("Appium dc fullReset :" + appcap.values()[local_capability_index].getFullReset());
+		
+		dc.setCapability("app-Package", appcap.values()[local_capability_index].getAppPackage());
+		System.out.println("Appium dc app-Package :"+appcap.values()[local_capability_index].getAppPackage());
+
 		dc.setCapability("app", app.getAbsolutePath());
-		//dc.setCapability("app-Activity", "com.EasyEstate.Activity.MainActivity");
+		System.out.println("Absolute path of the testing mobile app is  :" + app.getAbsolutePath());
+		
 		driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"),dc);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		System.out.println("----------------------------------------------------------------------------");
+		System.out.println("                                                                             ");
+
 		return driver;
 	}
 	/**
