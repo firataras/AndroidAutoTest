@@ -2,7 +2,7 @@ package AppUtil;
 
 public enum TestingApp {
 	
-	targetapplication("Wirofon", "Wirofon-Client-2.0.0-rc04.apk"),
+	targetapplication("Wirofon", "Wirofon-Client-2.0.0-rc05.apk"),
 
 	EndOfTestingApp("", "");
 	

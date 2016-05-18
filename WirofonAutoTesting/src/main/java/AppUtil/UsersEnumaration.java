@@ -3,7 +3,7 @@ package AppUtil;
 public enum UsersEnumaration {
 	ismailfirataras("ismailfirataras", "/Users/ismailfirataras/Documents/ARGELA_PROJECT/TestAutomation/"),
 	gurkanca("gurkanca", "C:\\Users\\gurkanca\\Documents\\workspace\\Wirofon_Apk\\"),
-	tulayuy("tulayuy", "C:\\Users\\tulayuy\\Documents\\workspace\\Wirofon_Apk\\"),
+	tulayuy("tulayuy", "C:\\Users\\tulayuy\\Downloads\\"),
 	emirhanuz("emirhanuz", "C:\\Users\\tulayuy\\Documents\\workspace\\Wirofon_Apk\\"),
 	EndOfUsersEnumaration("", "");
 	
