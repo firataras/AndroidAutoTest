@@ -3,6 +3,7 @@ package AppUtil;
 public enum AppiumCapabilities {
 	
 	Capability1(0,"","Android","4.2.2","CustomPhone4.2.2_API17",false,"tr.com.argela.client.android.phone.wirofon"),
+	Capability2(1,"","Android","4.3","CustomPhone4.3_API_18",false,"tr.com.argela.client.android.phone.wirofon"),
 	EndOfCapabilities(999999,null,null,null,null,false,null);
 	
 	

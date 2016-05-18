@@ -21,6 +21,22 @@ public enum Enumarations {
 	GirisYapSifremiUnuttumTextView(0, "Şifremi unuttum","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
 	GirisYapHesapOlusturmakIstiyorumTextView(1, "Hesap oluşturmak istiyorum","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
 	
+	//Hesap Olustur Sayfasi 
+	HesapOlusturBackIcon(0, null,"android.widget.ImageButton", "tr.com.argela.client.android.phone.wirofon","back"),
+	HesapOlusturTikIcon(0, null,"android.widget.ImageButton", "tr.com.argela.client.android.phone.wirofon","continue"),
+	HesapOlusturTextView(2, "Hesap Oluştur","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
+	HesapOlusturKullaniciTipi(0, "Kullanıcı Tipi","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
+	HesapOlusturHatSahibiClickButton(0, "","android.widget.ImageView", "tr.com.argela.client.android.phone.wirofon",null),
+	HesapOlusturHatSahibiYakiniClickButton(0, "","android.widget.ImageView", "tr.com.argela.client.android.phone.wirofon",null),
+	HesapOlusturHatSahibiTextView(1, "Hat Sahibi","android.widget.TextVieww", "tr.com.argela.client.android.phone.wirofon",null),
+	HesapOlusturHatSahibiYakiniTextView(1, "Hat Sahibi Yakını","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
+	
+	
+	
+	
+	
+	
+	
 	//Baglaniyor Sayfasi
 	BaglaniyorProgressBar(0, null,"android.widget.ProgressBar", "tr.com.argela.client.android.phone.wirofon",null),
 	BaglaniyorKullaniciAdiTextView(1,"username","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),

@@ -68,6 +68,7 @@ public class WirofonAutoTesting {
 		LoginPage.BaglaniyorPage.checkUsernameInProgressbarPage(driver, enumaration.BaglaniyorKullaniciAdiTextView  , username);
 		LoginPage.BaglaniyorPage.waiting(driver);
 		LoginPage.PopupNotification.check(driver);
+		driver.scrollTo("Kişi");
 
 
 	}
