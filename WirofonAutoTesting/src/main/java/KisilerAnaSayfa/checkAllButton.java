@@ -10,13 +10,13 @@ public class checkAllButton {
 
 
 	public static void clickKisiEklemeArtiSembol(AndroidDriver<MobileElement> driver) {
-		SpesificMobilElement.clickByIndex(driver, Enumarations.KisilerAnaSayfaArtýSembolKiþiEkleme);
-		System.out.println("Kisiler Ana Sayfa Artý Sembolune basýldý.");
+		SpesificMobilElement.clickByIndex(driver, Enumarations.KisilerAnaSayfaArtiSembolKisiEkleme);
+		System.out.println("Kisiler Ana Sayfa Artï¿½ Sembolune basï¿½ldï¿½.");
 		}
 	
 	public static void clickKisiArmaSearchSembol(AndroidDriver<MobileElement> driver) {
-		SpesificMobilElement.clickByIndex(driver, Enumarations.KisilerAnaSayfaSearchSembolKiþiArama);
-		System.out.println("Kisiler Ana Sayfa Search Sembolune basýldý.");
+		SpesificMobilElement.clickByIndex(driver, Enumarations.KisilerAnaSayfaSearchSembolKisiArama);
+		System.out.println("Kisiler Ana Sayfa Search Sembolune basï¿½ldï¿½.");
 		}	
 	public static void clickMesajlarAnaSayfa(AndroidDriver<MobileElement> driver) {
 		SpesificMobilElement.clickRelativeLayoutByIndex(driver, Enumarations.KisilerAnaSayfaMesajlarRelativeLayout);

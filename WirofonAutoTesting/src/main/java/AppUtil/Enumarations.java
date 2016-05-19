@@ -54,8 +54,8 @@ public enum Enumarations {
 	KisilerAnaSayfaCagrilarRelativeLayout(2, null,"android.widget.RelativeLayout", "tr.com.argela.client.android.phone.wirofon",null),
 	KisilerAnaSayfaTustakimiRelativeLayout(3, null,"android.widget.RelativeLayout", "tr.com.argela.client.android.phone.wirofon",null),
 	KisilerAnaSayfaDahafazlaRelativeLayout(4, null,"android.widget.RelativeLayout", "tr.com.argela.client.android.phone.wirofon",null),
-	KisilerAnaSayfaArtıSembolKişiEkleme(0, null,"android.widget.ImageButton", "tr.com.argela.client.android.phone.wirofon","add"),
-	KisilerAnaSayfaSearchSembolKişiArama(1, null,"android.widget.ImageButton", "tr.com.argela.client.android.phone.wirofon","add"),
+	KisilerAnaSayfaArtiSembolKisiEkleme(0, null,"android.widget.ImageButton", "tr.com.argela.client.android.phone.wirofon","add"),
+	KisilerAnaSayfaSearchSembolKisiArama(1, null,"android.widget.ImageButton", "tr.com.argela.client.android.phone.wirofon","add"),
 	
 	//Kisi Ekleme Ekranı
 	KisiEklemeEkraniBitirTiklemeButonu(0, "","android.widget.ImageView", "tr.com.argela.client.android.phone.wirofon",null),
