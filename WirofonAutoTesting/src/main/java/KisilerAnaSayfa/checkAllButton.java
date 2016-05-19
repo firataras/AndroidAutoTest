@@ -11,12 +11,12 @@ public class checkAllButton {
 
 	public static void clickKisiEklemeArtiSembol(AndroidDriver<MobileElement> driver) {
 		SpesificMobilElement.clickByIndex(driver, Enumarations.KisilerAnaSayfaArtiSembolKisiEkleme);
-		System.out.println("Kisiler Ana Sayfa Art� Sembolune bas�ld�.");
+		System.out.println("Kisiler Ana Sayfa Arti Sembolune basildi.");
 		}
 	
 	public static void clickKisiArmaSearchSembol(AndroidDriver<MobileElement> driver) {
 		SpesificMobilElement.clickByIndex(driver, Enumarations.KisilerAnaSayfaSearchSembolKisiArama);
-		System.out.println("Kisiler Ana Sayfa Search Sembolune bas�ld�.");
+		System.out.println("Kisiler Ana Sayfa Search Sembolune basildi.");
 		}	
 	public static void clickMesajlarAnaSayfa(AndroidDriver<MobileElement> driver) {
 		SpesificMobilElement.clickRelativeLayoutByIndex(driver, Enumarations.KisilerAnaSayfaMesajlarRelativeLayout);

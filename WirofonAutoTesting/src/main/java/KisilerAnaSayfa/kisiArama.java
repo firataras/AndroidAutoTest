@@ -14,7 +14,7 @@ public class kisiArama {
 		checkAllButton.clickKisiArmaSearchSembol(driver);
 		SpesificMobilElement.sendKeysByText(driver, Enumarations.KisiAramaIsimGirisKutucugu, KisiBilgisi.Contact1.getName());
 
-		System.out.println("Kisi Arama Testi icin "+KisiBilgisi.Contact1.getName()+" kisisi yazýldý.");
+		System.out.println("Kisi Arama Testi icin "+KisiBilgisi.Contact1.getName()+" kisisi yazildi.");
 
 	}
 }
