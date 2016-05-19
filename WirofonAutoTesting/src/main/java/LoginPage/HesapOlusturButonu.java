@@ -16,10 +16,10 @@ public class HesapOlusturButonu {
 		boolean result = control(driver);
 		
 		if(result == true) {
-			System.out.println("Giris Butonuna basildiktan sonra , program dogru sayfaya gidiyor.");
+			System.out.println("Hesap oluþtur butonuna basildiktan sonra , program dogru sayfaya gidiyor.");
 		} 
 		else{
-			System.out.println("Giris Butonuna basildiktan sonra , program yanlýþ sayfaya gidiyor.");
+			System.out.println("Hesap oluþtur butonuna basildiktan sonra , program yanlýþ sayfaya gidiyor.");
 		}  
 			
 		driver.navigate().back();

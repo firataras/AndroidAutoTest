@@ -30,13 +30,7 @@ public enum Enumarations {
 	HesapOlusturHatSahibiYakiniClickButton(0, "","android.widget.ImageView", "tr.com.argela.client.android.phone.wirofon",null),
 	HesapOlusturHatSahibiTextView(1, "Hat Sahibi","android.widget.TextVieww", "tr.com.argela.client.android.phone.wirofon",null),
 	HesapOlusturHatSahibiYakiniTextView(1, "Hat Sahibi Yakını","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
-	
-	
-	
-	
-	
-	
-	
+		
 	//Baglaniyor Sayfasi
 	BaglaniyorProgressBar(0, null,"android.widget.ProgressBar", "tr.com.argela.client.android.phone.wirofon",null),
 	BaglaniyorKullaniciAdiTextView(1,"username","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
@@ -53,6 +47,27 @@ public enum Enumarations {
 	HataliSifreAciklamaTextView(0, "3 defa arka arkaya yanlış şifre girdiğiniz için hesabınız 15 dakika boyunca bloke edilmiştir. 15 dakika sonra tekrar deneyiniz ya da şifrenizi www.wirofon.com üzerinden güncelleyiniz","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
 	HataliSifreTamamButonu(0, "Tamam","android.widget.Button", "tr.com.argela.client.android.phone.wirofon",null),
 	HataliSifreYardimButonu(1, "Yardım","android.widget.Button", "tr.com.argela.client.android.phone.wirofon",null),
+	
+	//Login olduktan sonra gelen sayfanin üst mavi menüsünde bulunan Kişi ekleme artı sembol, Kişi arama search button, kişiler, mesajlar, çağrılar, tuş takımı ve daha fazla sembolerinin tanımlamaları
+	KisilerAnaSayfaKisilerRelativeLayout(0, null,"android.widget.RelativeLayout", "tr.com.argela.client.android.phone.wirofon",null),
+	KisilerAnaSayfaMesajlarRelativeLayout(1, null,"android.widget.RelativeLayout", "tr.com.argela.client.android.phone.wirofon",null),
+	KisilerAnaSayfaCagrilarRelativeLayout(2, null,"android.widget.RelativeLayout", "tr.com.argela.client.android.phone.wirofon",null),
+	KisilerAnaSayfaTustakimiRelativeLayout(3, null,"android.widget.RelativeLayout", "tr.com.argela.client.android.phone.wirofon",null),
+	KisilerAnaSayfaDahafazlaRelativeLayout(4, null,"android.widget.RelativeLayout", "tr.com.argela.client.android.phone.wirofon",null),
+	KisilerAnaSayfaArtıSembolKişiEkleme(0, null,"android.widget.ImageButton", "tr.com.argela.client.android.phone.wirofon","add"),
+	KisilerAnaSayfaSearchSembolKişiArama(1, null,"android.widget.ImageButton", "tr.com.argela.client.android.phone.wirofon","add"),
+	
+	//Kisi Ekleme Ekranı
+	KisiEklemeEkraniBitirTiklemeButonu(0, "","android.widget.ImageView", "tr.com.argela.client.android.phone.wirofon",null),
+	KisiEklemeEkraniBitirDoneButonu(1, "Done","android.widget.TextView", "com.android.contacts",null),
+	KisiEklemeEkraniMoreOptionsButonu(0, null,"android.widget.ImageButton", "com.android.contacts","More options"),
+	KisiEklemeIsimGirisKutucugu(0, "Name","android.widget.EditText", "com.android.contacts",null),
+	KisiEklemeNumaraGirisKutucugu(0, "Phone","android.widget.EditText", "com.android.contacts",null),
+	
+	//Kisi Arama Satırı
+	KisiAramaIsimGirisKutucugu(1, "Arama","android.widget.EditText", "tr.com.argela.client.android.phone.wirofon",null),
+	KisiAramaGeriButonu(0, null,"android.widget.ImageView", "tr.com.argela.client.android.phone.wirofon",null),
+	
 	
 	
 	
