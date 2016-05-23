@@ -8,6 +8,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import WelcomePage.FirstWelcomePage;
 import AppUtil.*;
+import KisilerAnaSayfa.*;
 
 
 public class WirofonAutoTesting {
@@ -77,12 +78,18 @@ public class WirofonAutoTesting {
 	}
 	
 	@Test(priority = 8, groups = "Test")
-	public void KisiAramaTest() {
-		KisilerAnaSayfa.kisiArama.arama(driver);
+	public void KisiAramaWirofon() {
+		checkAllButton.clickKisilerWirofon(driver);
+		KisilerAnaSayfa.kisiArama.arama(driver, KisiBilgisi.Contact1);
+	}
+	
+	@Test(priority = 9, groups = "Test")
+	public void KisiAramaTumu() {
+		checkAllButton.clickKisilerTumu(driver);
+		KisilerAnaSayfa.kisiArama.arama(driver, KisiBilgisi.Contact1);
 		
 		
 	}
-	
 	
 	
 }

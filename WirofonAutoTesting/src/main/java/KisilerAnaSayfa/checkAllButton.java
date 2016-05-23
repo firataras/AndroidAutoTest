@@ -41,5 +41,12 @@ public class checkAllButton {
 		SpesificMobilElement.clickRelativeLayoutByIndex(driver, Enumarations.KisilerAnaSayfaKisilerRelativeLayout);
 		System.out.println("Kisiler Ana Sayfasina Gecildi.");
 		}
-	
+	public static void clickKisilerWirofon(AndroidDriver<MobileElement> driver) {
+		SpesificMobilElement.clickByText(driver, Enumarations.KisilerAnaSayfaWirofon);
+		System.out.println("Kisiler Ana Sayfasina Gecildi.");
+		}
+	public static void clickKisilerTumu(AndroidDriver<MobileElement> driver) {
+		SpesificMobilElement.clickByText(driver, Enumarations.KisilerAnaSayfaTumu);
+		System.out.println("Kisiler Ana Sayfasina Gecildi.");
+		}
 }

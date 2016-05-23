@@ -42,7 +42,9 @@ public class SpesificMobilElement {
 	
 	public static void sendKeys(AndroidDriver<MobileElement> driver, Enumarations enumaration, String value){
 		driver.findElementsByClassName(enumaration.getClas()).get(enumaration.getIndex()).sendKeys(value);
-
+	}
+	public static void sendKeysbyClass(AndroidDriver<MobileElement> driver, Enumarations enumaration, String value){
+		driver.findElementByClassName(enumaration.getClas()).sendKeys(value);
 	}
 	
 	public static void sendKeysByText(AndroidDriver<MobileElement> driver, Enumarations enumaration, String value){

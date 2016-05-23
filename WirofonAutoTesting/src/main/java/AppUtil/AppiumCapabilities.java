@@ -2,9 +2,9 @@ package AppUtil;
 
 public enum AppiumCapabilities {
 	
-	Capability1(0,"","Android","4.2.2","CustomPhone4.2.2_API17",false,"tr.com.argela.client.android.phone.wirofon"),
-	Capability2(1,"","Android","4.3","CustomPhone4.3_API_18",false,"tr.com.argela.client.android.phone.wirofon"),
-	EndOfCapabilities(999999,null,null,null,null,false,null);
+	Capability1(0,"","Android","4.2.2","CustomPhone4.2.2_API17",false,true,"tr.com.argela.client.android.phone.wirofon"),
+	Capability2(1,"","Android","4.3","CustomPhone4.3_API_18",false,true,"tr.com.argela.client.android.phone.wirofon"),
+	EndOfCapabilities(999999,null,null,null,null,false,true,null);
 	
 	
 
@@ -14,9 +14,10 @@ public enum AppiumCapabilities {
 	private String platformVersion;
 	private String deviceName;
 	private boolean fullReset;
+	private boolean unicodeKeyboard;
 	private String appPackage;
 
-	private AppiumCapabilities(int index,String browserName,String platformName,String platformVersion, String deviceName , boolean fullReset, String appPackage) {
+	private AppiumCapabilities(int index,String browserName,String platformName,String platformVersion, String deviceName , boolean fullReset, boolean unicodeKeyboard, String appPackage) {
 
 		this.index = index;
 		this.browserName = browserName;
@@ -24,6 +25,7 @@ public enum AppiumCapabilities {
 		this.platformVersion = platformVersion;
 		this.deviceName = deviceName;
 		this.fullReset = fullReset;
+		this.unicodeKeyboard = unicodeKeyboard;
 		this.appPackage = appPackage;
 		
 	}
@@ -47,8 +49,13 @@ public enum AppiumCapabilities {
 	public boolean getFullReset() {
 		return fullReset;
 	}
+	public boolean getUnicodeKeyboard() {
+		return unicodeKeyboard;
+	}
 	public String getAppPackage() {
 		return appPackage;
 	}
+
+	
 
 }

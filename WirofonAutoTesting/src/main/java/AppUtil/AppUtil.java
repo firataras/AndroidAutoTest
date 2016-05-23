@@ -88,9 +88,14 @@ public class AppUtil {
 		
 		dc.setCapability("app-Package", appcap.values()[local_capability_index].getAppPackage());
 		System.out.println("Appium dc app-Package :"+appcap.values()[local_capability_index].getAppPackage());
+		
+		dc.setCapability("unicodeKeyboard", appcap.values()[local_capability_index].getUnicodeKeyboard());
+		System.out.println("Appium dc app-Package :"+appcap.values()[local_capability_index].getUnicodeKeyboard());
 
 		dc.setCapability("app", app.getAbsolutePath());
 		System.out.println("Absolute path of the testing mobile app is  :" + app.getAbsolutePath());
+		
+
 		
 		driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"),dc);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
