@@ -43,10 +43,10 @@ public class checkAllButton {
 		}
 	public static void clickKisilerWirofon(AndroidDriver<MobileElement> driver) {
 		SpesificMobilElement.clickByText(driver, Enumarations.KisilerAnaSayfaWirofon);
-		System.out.println("Kisiler Ana Sayfasina Gecildi.");
+		System.out.println("Wirofon kontaklari sayfasina gecildi.");
 		}
 	public static void clickKisilerTumu(AndroidDriver<MobileElement> driver) {
 		SpesificMobilElement.clickByText(driver, Enumarations.KisilerAnaSayfaTumu);
-		System.out.println("Kisiler Ana Sayfasina Gecildi.");
+		System.out.println("Tum kontaklar ana sayfasina gecildi.");
 		}
 }

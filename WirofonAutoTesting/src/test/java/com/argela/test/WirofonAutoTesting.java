@@ -63,8 +63,8 @@ public class WirofonAutoTesting {
 		//LoginPage.PopupNotification.check(driver);
 		
 	}
-	//@Test(priority = 7, groups = "Test")
-	public void KisilerAnaSayfaArtiButonTest() {
+	@Test(priority = 7, groups = "Test")
+	public void KisilerAnaSayfaButonTestleri() {
 		KisilerAnaSayfa.checkAllButton.clickKisiEklemeArtiSembol(driver);
 		driver.navigate().back();
 		KisilerAnaSayfa.checkAllButton.clickKisiArmaSearchSembol(driver);
@@ -74,21 +74,24 @@ public class WirofonAutoTesting {
 		KisilerAnaSayfa.checkAllButton.clickTusTakimiAnaSayfa(driver);
 		KisilerAnaSayfa.checkAllButton.clickDahaFazlaAnaSayfa(driver);
 		KisilerAnaSayfa.checkAllButton.clickKisilerAnaSayfa(driver);
-		KisilerAnaSayfa.kisiEkleme.ekleme(driver, KisiBilgisi.Contact1);
 	}
 	
 	@Test(priority = 8, groups = "Test")
-	public void KisiAramaWirofon() {
-		checkAllButton.clickKisilerWirofon(driver);
-		KisilerAnaSayfa.kisiArama.arama(driver, KisiBilgisi.Contact1);
+	public void KisiEkleme() {
+		KisilerAnaSayfa.kisi.ekleme(driver, KisiBilgisi.Contact1);
 	}
+
 	
 	@Test(priority = 9, groups = "Test")
+	public void KisiAramaWirofon() {
+		checkAllButton.clickKisilerWirofon(driver);
+		KisilerAnaSayfa.kisi.arama(driver, KisiBilgisi.Contact1);
+	}
+	
+	@Test(priority = 10, groups = "Test")
 	public void KisiAramaTumu() {
 		checkAllButton.clickKisilerTumu(driver);
-		KisilerAnaSayfa.kisiArama.arama(driver, KisiBilgisi.Contact1);
-		
-		
+		KisilerAnaSayfa.kisi.arama(driver, KisiBilgisi.Contact1);
 	}
 	
 	
