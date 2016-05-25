@@ -15,6 +15,10 @@ public class SpesificMobilElement {
 		driver.findElementByName(enumaration.getText()).click();
 
 	}
+	public static void continousclickByText(AndroidDriver<MobileElement> driver, String value) {
+		driver.findElementByName(value).tap(1, 4000);
+
+	}
 	
 	public static void clickRelativeLayoutByIndex(AndroidDriver<MobileElement> driver, Enumarations enumaration) {
 		

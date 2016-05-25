@@ -1,3 +1,5 @@
+
+
 package com.argela.test;
 
 import org.testng.annotations.Test;
@@ -28,17 +30,17 @@ public class WirofonAutoTesting {
 		FirstWelcomePage.checkAllButons(driver);
 	}
 
-	//@Test(priority = 3, groups = "Test")
+	@Test(priority = 3, groups = "Test")
 	public void GirisYapButtonTest() {
 		LoginPage.GirisYapButonu.test(driver);
 	}
 	
-	//@Test(priority = 4, groups = "Test")
+	@Test(priority = 4, groups = "Test")
 	public void HesapOlusturButtonTest() {
 		LoginPage.HesapOlusturButonu.test(driver);
 	}
 
-	//@Test(priority = 5, groups = "Test")
+	@Test(priority = 5, groups = "Test")
 	public void LogInwithWrongPassword() {
 	
 		username= "firat";
@@ -65,34 +67,75 @@ public class WirofonAutoTesting {
 	}
 	@Test(priority = 7, groups = "Test")
 	public void KisilerAnaSayfaButonTestleri() {
-		KisilerAnaSayfa.checkAllButton.clickKisiEklemeArtiSembol(driver);
+		buttons.clickKisiEklemeArtiSembol(driver);
 		driver.navigate().back();
-		KisilerAnaSayfa.checkAllButton.clickKisiArmaSearchSembol(driver);
-		driver.navigate().back();
-		KisilerAnaSayfa.checkAllButton.clickMesajlarAnaSayfa(driver);
-		KisilerAnaSayfa.checkAllButton.clickCagrilarAnaSayfa(driver);
-		KisilerAnaSayfa.checkAllButton.clickTusTakimiAnaSayfa(driver);
-		KisilerAnaSayfa.checkAllButton.clickDahaFazlaAnaSayfa(driver);
-		KisilerAnaSayfa.checkAllButton.clickKisilerAnaSayfa(driver);
-	}
+	}		
 	
 	@Test(priority = 8, groups = "Test")
-	public void KisiEkleme() {
+	public void KisilerAnaSayfaKisiEklemeButonTest() {
+		buttons.clickKisiEklemeArtiSembol(driver);
+		driver.navigate().back();
+	}
+	
+	@Test(priority = 9, groups = "Test")
+	public void KisilerAnaSayfaKisiAramaButonTest() {
+	buttons.clickKisiAramaSearchSembol(driver);
+		driver.navigate().back();
+	}
+
+	@Test(priority = 10, groups = "Test")
+	public void MesajlarAnaSayfaButonTest() {
+		buttons.clickMesajlarAnaSayfa(driver);
+	}
+	
+	@Test(priority = 11, groups = "Test")
+	public void CagrilarAnaSayfaButonTest() {
+		buttons.clickCagrilarAnaSayfa(driver);
+	}
+
+	@Test(priority = 12, groups = "Test")
+	public void TusTakimiAnaSayfaButonTest() {
+		buttons.clickTusTakimiAnaSayfa(driver);
+	}
+	@Test(priority = 13, groups = "Test")
+	public void DahaFazlaButonTest() {
+		buttons.clickDahaFazlaAnaSayfa(driver);
+	}
+	
+	@Test(priority = 14, groups = "Test")
+	public void KisilerAnaSayfaButonTest() {
+		buttons.clickKisilerAnaSayfa(driver);
+	}
+
+	
+	@Test(priority = 15, groups = "Test")
+	public void KisiEklemeTest() {
 		KisilerAnaSayfa.kisi.ekleme(driver, KisiBilgisi.Contact1);
 	}
 
 	
-	@Test(priority = 9, groups = "Test")
-	public void KisiAramaWirofon() {
-		checkAllButton.clickKisilerWirofon(driver);
+	@Test(priority = 16, groups = "Test")
+	public void KisiAramaWirofonTest() {
+		buttons.clickKisilerWirofon(driver);
 		KisilerAnaSayfa.kisi.arama(driver, KisiBilgisi.Contact1);
 	}
 	
-	@Test(priority = 10, groups = "Test")
+	@Test(priority = 17, groups = "Test")
 	public void KisiAramaTumu() {
-		checkAllButton.clickKisilerTumu(driver);
+		buttons.clickKisilerTumu(driver);
 		KisilerAnaSayfa.kisi.arama(driver, KisiBilgisi.Contact1);
+		buttons.clickKisilerAramaCarpiButonu(driver);
+
 	}
+	@Test(priority = 18, groups = "Test")
+	public void KisiSilmeTest() {
+		buttons.clickKisilerWirofon(driver);
+		KisilerAnaSayfa.kisi.doubleclick(driver, KisiBilgisi.Contact1);
+		KisilerAnaSayfa.popup.clickSil(driver);
+		KisilerAnaSayfa.popup.clickWirofonPopUpTamam(driver);
+		
+	}
+	
 	
 	
 }

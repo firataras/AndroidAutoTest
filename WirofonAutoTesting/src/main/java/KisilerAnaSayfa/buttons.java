@@ -5,7 +5,7 @@ import AppUtil.SpesificMobilElement;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
-public class checkAllButton {
+public class buttons {
 	
 
 
@@ -14,10 +14,19 @@ public class checkAllButton {
 		System.out.println("Kisiler Ana Sayfa Arti Sembolune basildi.");
 		}
 	
-	public static void clickKisiArmaSearchSembol(AndroidDriver<MobileElement> driver) {
+
+	
+	public static void clickKisiAramaSearchSembol(AndroidDriver<MobileElement> driver) {
 		SpesificMobilElement.clickByIndex(driver, Enumarations.KisilerAnaSayfaSearchSembolKisiArama);
 		System.out.println("Kisiler Ana Sayfa Search Sembolune basildi.");
-		}	
+		}
+	public static void clickKisilerAramaCarpiButonu(AndroidDriver<MobileElement> driver) {
+		SpesificMobilElement.clickByIndex(driver, Enumarations.KisiAramaCarpiButonu);
+		System.out.println("Kisiler Ana Sayfa Carpi Sembolune basildi.");
+		}
+	
+	
+	
 	public static void clickMesajlarAnaSayfa(AndroidDriver<MobileElement> driver) {
 		SpesificMobilElement.clickRelativeLayoutByIndex(driver, Enumarations.KisilerAnaSayfaMesajlarRelativeLayout);
 		System.out.println("Mesajlar Ana Sayfasina Gecildi.");
@@ -49,4 +58,6 @@ public class checkAllButton {
 		SpesificMobilElement.clickByText(driver, Enumarations.KisilerAnaSayfaTumu);
 		System.out.println("Tum kontaklar ana sayfasina gecildi.");
 		}
+
+	
 }

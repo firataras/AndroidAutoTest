@@ -70,6 +70,23 @@ public enum Enumarations {
 	//Kisi Arama Satırı
 	KisiAramaIsimGirisKutucugu(1, "Arama","android.widget.EditText", "tr.com.argela.client.android.phone.wirofon",null),
 	KisiAramaGeriButonu(0, null,"android.widget.ImageView", "tr.com.argela.client.android.phone.wirofon",null),
+	KisiAramaCarpiButonu(1, null,"android.widget.ImageButton", "tr.com.argela.client.android.phone.wirofon",null),
+	
+	
+	// SesliAra,GoruntuluAra,MobilAra,Sil, Sohbet Popup ekrani 
+	SesliAra(0, "Sesli ara","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
+	GoruntuluAra(0, "Görüntülü ara","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
+	MobilAra(0, "Mobil ara","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
+	Sil(0, "Sil","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
+	Sohbet(0, "Sohbet","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
+	
+	//Wirofon 'Arkadas silinecek emin misiniz?' popup ekrani
+	WirofonPopupCaption(0, "Wirofon","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
+	WirofonPopupExplanation(0, "Arkadaş silinecek, emin misiniz?","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
+	WirofonPopupTamam(0, "Tamam","android.widget.Button", "tr.com.argela.client.android.phone.wirofon",null),
+	WirofonPopupIptal(1, "İptal","android.widget.Button", "tr.com.argela.client.android.phone.wirofon",null),
+	
+	
 	
 	
 	
