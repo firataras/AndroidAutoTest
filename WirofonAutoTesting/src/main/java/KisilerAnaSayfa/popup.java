@@ -9,7 +9,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class popup {
 	public static void clickSesliAra(AndroidDriver<MobileElement> driver){
 		
-	
+		SpesificMobilElement.clickByText(driver, Enumarations.SesliAra);
 	}
 	public static void clickGoruntuluAra(AndroidDriver<MobileElement> driver){
 		SpesificMobilElement.clickByText(driver, Enumarations.GoruntuluAra);
