@@ -30,7 +30,7 @@ public class WirofonAutoTesting {
 		FirstWelcomePage.checkAllButons(driver);
 	}
 
-	@Test(priority = 3, groups = "Test")
+	/*@Test(priority = 3, groups = "Test")
 	public void GirisYapButtonTest() {
 		LoginPage.GirisYapButonu.test(driver);
 	}
@@ -51,7 +51,7 @@ public class WirofonAutoTesting {
 		LoginPage.BaglaniyorPage.waiting(driver);
 		LoginPage.PopupNotification.check(driver);
 
-	}
+	}*/
 
 	@Test(priority = 6, groups = "Test")
 	public void LogInwithCorrectPassword() {
@@ -65,7 +65,7 @@ public class WirofonAutoTesting {
 		//LoginPage.PopupNotification.check(driver);
 		
 	}
-	@Test(priority = 7, groups = "Test")
+	/*@Test(priority = 7, groups = "Test")
 	public void KisilerAnaSayfaButonTestleri() {
 		buttons.clickKisiEklemeArtiSembol(driver);
 		driver.navigate().back();
@@ -107,6 +107,7 @@ public class WirofonAutoTesting {
 		buttons.clickKisilerAnaSayfa(driver);
 	}
 
+	*/
 	
 	@Test(priority = 15, groups = "Test")
 	public void KisiEklemeTest() {
