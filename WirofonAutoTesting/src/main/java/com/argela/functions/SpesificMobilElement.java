@@ -13,10 +13,15 @@ public class SpesificMobilElement {
 	}
 	
 	public static void clickByText(AndroidDriver<MobileElement> driver, Enumarations enumaration) {
+		
 		List<MobileElement> localmobile_elementlist = getLayouts(driver,enumaration);
+		System.setProperty("file.encoding", "ISO-8859-1");
 		for(int i=0; i < localmobile_elementlist.size(); i++){
 			if(localmobile_elementlist.get(i).getText().equals(enumaration.getText())){
-				localmobile_elementlist.get(i).click();
+				if(localmobile_elementlist.get(i).getAttribute("clickable").equals("true")){
+					localmobile_elementlist.get(i).click();
+				}
+				
 			}
 		}
 	}

@@ -25,6 +25,7 @@ public enum KisiBilgisi {
 			return index;
 		}
 		public String getName() {
+			
 			System.setProperty("file.encoding", "ISO-8859-1");
 			return name;
 		}

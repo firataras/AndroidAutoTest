@@ -12,7 +12,7 @@ public class LoginResponse {
 
 	
 	 public static  String  check(AndroidDriver<MobileElement> driver){
-		System.out.println("Login sonrasi durum degerlendiriliyor ... ");
+		 System.setProperty("file.encoding", "ISO-8859-1");
 		
 		if(EnumarationTextOnPage(driver, Enumarations.GeciciSistemHatasiTekrarDeneyinTextView)){	
 			SpesificMobilElement.clickByText(driver, Enumarations.GeciciSistemHatasiTamam);

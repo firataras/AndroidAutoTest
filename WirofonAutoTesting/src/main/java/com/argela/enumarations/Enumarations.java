@@ -113,18 +113,23 @@ public enum Enumarations {
 		this.content_desc = content_desc;
 	}
 	public int getIndex() {
+		System.setProperty("file.encoding", "ISO-8859-1");
 		return index;
 	}
 	public String getText() {
+		System.setProperty("file.encoding", "ISO-8859-1");
 		return text;
 	}
 	public String getClas() {
+		System.setProperty("file.encoding", "ISO-8859-1");
 		return clas;
 	}
 	public String getPackage() {
+		System.setProperty("file.encoding", "ISO-8859-1");
 		return paket;
 	}
 	public String getContent_desc() {
+		System.setProperty("file.encoding", "ISO-8859-1");
 		return content_desc;
 	}
 

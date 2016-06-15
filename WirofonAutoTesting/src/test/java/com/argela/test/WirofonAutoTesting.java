@@ -1,7 +1,5 @@
-
-
 package com.argela.test;
-
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -38,6 +36,7 @@ public class WirofonAutoTesting {
 		FirstWelcomePage.checkAllButons(driver);
 		SpesificMobilElement.clickByIndex(driver, Enumarations.CloseIconHosgeldinizEkrani);
 		GirisYapButonu.click(driver);
+
 	}
 
 
@@ -47,6 +46,12 @@ public class WirofonAutoTesting {
 		BaglaniyorPage.checkUsernameInProgressbarPage(driver, Enumarations.BaglaniyorKullaniciAdiTextView  , "firat");
 		BaglaniyorPage.waiting(driver);
 		LoginResponse.check(driver);
+		try {
+			driver.wait(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Test(groups = {"p1", "Login Test with correct password"}, dependsOnMethods="LogInwithWrongPassword")
@@ -56,56 +61,34 @@ public class WirofonAutoTesting {
 		BaglaniyorPage.checkUsernameInProgressbarPage(driver, Enumarations.BaglaniyorKullaniciAdiTextView  , "canmor");
 		BaglaniyorPage.waiting(driver);
 		LoginResponse.check(driver);
-		
+		try {
+			driver.wait(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-	@Test(priority = 7, groups = "Test")
-	public void KisilerAnaSayfaButonTestleri() {
+	@Test(groups = {"p1", "Wirofon Pages Check "}, dependsOnMethods="LogInwithCorrectPassword")
+	public void WirofonPageChecks() {
 		buttons.clickKisiEklemeArtiSembol(driver);
 		driver.navigate().back();
-	}		
-	
-	@Test(priority = 8, groups = "Test")
-	public void KisilerAnaSayfaKisiEklemeButonTest() {
 		buttons.clickKisiEklemeArtiSembol(driver);
 		driver.navigate().back();
-	}
-	
-	@Test(priority = 9, groups = "Test")
-	public void KisilerAnaSayfaKisiAramaButonTest() {
-	buttons.clickKisiAramaSearchSembol(driver);
+		buttons.clickKisiAramaSearchSembol(driver);
 		driver.navigate().back();
-	}
-
-	@Test(priority = 10, groups = "Test")
-	public void MesajlarAnaSayfaButonTest() {
 		buttons.clickMesajlarAnaSayfa(driver);
-	}
-	
-	@Test(priority = 11, groups = "Test")
-	public void CagrilarAnaSayfaButonTest() {
 		buttons.clickCagrilarAnaSayfa(driver);
-	}
-
-	@Test(priority = 12, groups = "Test")
-	public void TusTakimiAnaSayfaButonTest() {
 		buttons.clickTusTakimiAnaSayfa(driver);
-	}
-	@Test(priority = 13, groups = "Test")
-	public void DahaFazlaButonTest() {
 		buttons.clickDahaFazlaAnaSayfa(driver);
-	}
-	
-	@Test(priority = 14, groups = "Test")
-	public void KisilerAnaSayfaButonTest() {
 		buttons.clickKisilerAnaSayfa(driver);
 	}
-
 	
-	
-	@Test(priority = 15, groups = "Test")
-	public void KisiEklemeTest() {
+	@Test(groups = {"p1", "Wirofon Add Subscriber "}, dependsOnMethods="LogInwithCorrectPassword")
+	public void WirofonAddSubscriber() {
 		kisi.ekleme(driver, KisiBilgisi.Contact1);
 	}
+	
+	
 
 	
 	@Test(priority = 16, groups = "Test")
@@ -130,7 +113,11 @@ public class WirofonAutoTesting {
 		
 	}
 	
-	
+	@AfterClass(alwaysRun=true)
+	public void teardown(){
+		driver.quit();
+	}
+
 	
 }
 
