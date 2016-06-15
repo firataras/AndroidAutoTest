@@ -1,4 +1,4 @@
-package AppUtil;
+package com.argela.apputil;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
@@ -12,6 +12,8 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.*;
+
+import com.argela.enumarations.*;
 
 
 public class AppUtil {
@@ -71,6 +73,8 @@ public class AppUtil {
 		
 		DesiredCapabilities dc = new DesiredCapabilities();
 		
+		
+		
 		dc.setCapability("browserName",appcap.values()[local_capability_index].getBrowserName());
 		System.out.println("Appium dc browserName :" + appcap.values()[local_capability_index].getBrowserName());
 		
@@ -90,24 +94,26 @@ public class AppUtil {
 		System.out.println("Appium dc app-Package :"+appcap.values()[local_capability_index].getAppPackage());
 		
 		dc.setCapability("unicodeKeyboard", appcap.values()[local_capability_index].getUnicodeKeyboard());
-		System.out.println("Appium dc app-Package :"+appcap.values()[local_capability_index].getUnicodeKeyboard());
+		System.out.println("unicodeKeyboard :"+appcap.values()[local_capability_index].getUnicodeKeyboard());
 
+		dc.setCapability("language", "en");
+		dc.setCapability("locale", "en");
+		
+		System.out.println("Appium dc app-Package :"+appcap.values()[local_capability_index].getUnicodeKeyboard());
+		
+		
 		dc.setCapability("app", app.getAbsolutePath());
 		System.out.println("Absolute path of the testing mobile app is  :" + app.getAbsolutePath());
 		
 
 		
 		driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"),dc);
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("----------------------------------------------------------------------------");
 		System.out.println("                                                                             ");
 
 		return driver;
 	}
-	/**
-	 * Initial Screen Test
-	 * @param driver
-	 * @throws InterruptedException
-	 */
+
 
 }

@@ -1,5 +1,6 @@
-package AppUtil;
+package com.argela.functions;
 
+import com.argela.enumarations.*;
 import java.util.List;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -8,13 +9,18 @@ import io.appium.java_client.android.AndroidDriver;
 public class SpesificMobilElement {
 
 	public static void clickByIndex(AndroidDriver<MobileElement> driver,Enumarations enumaration) {
-		driver.findElementsByClassName(enumaration.getClas	()).get(enumaration.getIndex()).click();
+		driver.findElementsByClassName(enumaration.getClas()).get(enumaration.getIndex()).click();
+	}
 	
-	}
 	public static void clickByText(AndroidDriver<MobileElement> driver, Enumarations enumaration) {
-		driver.findElementByName(enumaration.getText()).click();
-
+		List<MobileElement> localmobile_elementlist = getLayouts(driver,enumaration);
+		for(int i=0; i < localmobile_elementlist.size(); i++){
+			if(localmobile_elementlist.get(i).getText().equals(enumaration.getText())){
+				localmobile_elementlist.get(i).click();
+			}
+		}
 	}
+
 	public static void continousclickByText(AndroidDriver<MobileElement> driver, String value) {
 		driver.findElementByName(value).tap(1, 4000);
 

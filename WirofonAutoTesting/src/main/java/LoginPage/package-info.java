@@ -1,8 +1,0 @@
-/**
- * 
- */
-/**
- * @author ismailfirataras
- *
- */
-package LoginPage;

@@ -1,10 +1,10 @@
-package LoginPage;
+package com.argela.pages.login;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import AppUtil.Enumarations;
-import AppUtil.SpesificMobilElement;
+import com.argela.enumarations.Enumarations;
+import com.argela.functions.SpesificMobilElement;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -15,7 +15,7 @@ public class GirisYapEkrani {
 		String username = Username;
 		String password = Password;
 
-		SpesificMobilElement.sendKeys(driver, Enumarations.GirisYapKullaniciAdinizEditText, username);
+		com.argela.functions.SpesificMobilElement.sendKeys(driver, Enumarations.GirisYapKullaniciAdinizEditText, username);
 		System.out.println("Kullanici adi olarak " + username + " girildi.");
 
 		SpesificMobilElement.sendKeys(driver, Enumarations.GirisYapSifrenizEditText, password);

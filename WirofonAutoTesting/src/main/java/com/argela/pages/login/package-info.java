@@ -5,4 +5,4 @@
  * @author ismailfirataras
  *
  */
-package WelcomePage;
+package com.argela.pages.login;

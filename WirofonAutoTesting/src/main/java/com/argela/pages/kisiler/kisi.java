@@ -1,13 +1,13 @@
-package KisilerAnaSayfa;
+package com.argela.pages.kisiler;
 
-import java.util.List;
 
-import AppUtil.Enumarations;
-import AppUtil.KisiBilgisi;
-import AppUtil.SpesificMobilElement;
+
+import com.argela.enumarations.*;
+import com.argela.functions.*;
+
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.*;
+
 
 
 

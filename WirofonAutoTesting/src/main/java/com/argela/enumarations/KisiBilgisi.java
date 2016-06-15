@@ -1,4 +1,4 @@
-package AppUtil;
+package com.argela.enumarations;
 
 public enum KisiBilgisi {
 

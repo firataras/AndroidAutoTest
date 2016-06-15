@@ -1,8 +1,8 @@
-package AppUtil;
+package com.argela.enumarations;
 
 public enum TestingApp {
 	
-	targetapplication("Wirofon", "Wirofon-Client-2.0.0-rc05.apk"),
+	targetapplication("Wirofon", "Wirofon-Client-2.0.0-rc08.apk"),
 
 	EndOfTestingApp("", "");
 	

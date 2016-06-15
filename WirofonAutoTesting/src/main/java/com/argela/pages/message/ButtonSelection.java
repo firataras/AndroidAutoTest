@@ -1,4 +1,4 @@
-package MessagePage;
+package com.argela.pages.message;
 
 import org.openqa.selenium.By;
 

@@ -1,7 +1,10 @@
-package LoginPage;
+package com.argela.pages.login;
 import java.util.List;
 
-import AppUtil.*;
+
+import com.argela.enumarations.Enumarations;
+import com.argela.functions.SpesificMobilElement;
+
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 

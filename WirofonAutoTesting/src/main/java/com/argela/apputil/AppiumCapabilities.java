@@ -1,4 +1,4 @@
-package AppUtil;
+package com.argela.apputil;
 
 public enum AppiumCapabilities {
 	

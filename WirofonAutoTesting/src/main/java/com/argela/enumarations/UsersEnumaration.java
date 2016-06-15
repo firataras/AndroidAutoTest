@@ -1,7 +1,7 @@
-package AppUtil;
+package com.argela.enumarations;
 
 public enum UsersEnumaration {
-	ismailfirataras("ismailfirataras", "/Users/ismailfirataras/Documents/ARGELA_PROJECT/TestAutomation/"),
+	ismailfirataras("ismailfirataras", "/Users/ismailfirataras/Documents/workspace/Library/TestAutomation/releases/"),
 	gurkanca("gurkanca", "C:\\Users\\gurkanca\\Documents\\workspace\\Wirofon_Apk\\"),
 	tulayuy("tulayuy", "C:\\Users\\tulayuy\\Downloads\\"),
 	emirhanuz("emirhanuz", "C:\\Users\\tulayuy\\Documents\\workspace\\Wirofon_Apk\\"),

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-	<test name="Test">
-		<parameter name="username" value="934628034"></parameter>
-		<parameter name="password" value="934628034"></parameter>
+<suite name="Wirofon Android Yalin Wirofon Test Suite" verbose= "8">
+	<test name="p1 Test">
+		<groups>
+			<run>
+				<include name="p1"></include>
+			</run>
+		</groups>
 		<classes>
-			<class name="com.argela.test.MainScreen" />
+			<class name="com.argela.test.WirofonAutoTesting" />
 		</classes>
-	</test> <!-- Test -->
+	</test>
 </suite> <!-- Suite -->

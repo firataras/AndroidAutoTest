@@ -1,16 +1,21 @@
-package AppUtil;
+package com.argela.enumarations;
 
 
 public enum Enumarations {
 
-	//First Welcome Page Warning Page Enumarations
-	WarnningMessage(0, "Kullanmakta olduğunuz cihazın yazılımı değiştirilmiştir. Bu durum cihazınızı, iletişim mahremiyetinize zarar verebilecek saldırılara açık hale getirmektedir. Devam etmek istiyor musunuz?", "android.widget.ImageView", "tr.com.argela.client.android.phone.wirofon",null),
+	//First Welcome Page Warning Page Enumerations
+	WarnningMessage(0, "Kullanmakta olduğunuz cihazın yazılımı değiştirilmiştir. Bu durum cihazınızı, iletişim mahremiyetinize zarar verebilecek saldırılara açık hale getirmektedir. Devam etmek istiyor musunuz?", "android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
 	YesButtonOnWarnningMessage(0, "Evet", "android.widget.Button","tr.com.argela.client.android.phone.wirofon",null),
 	NoButtonOnWarnningMessage(1, "Hayır", "android.widget.Button", "tr.com.argela.client.android.phone.wirofon",null),
 	
 	//GirisYapButon ve Hesap Olustur Buton Sayfasi  
 	GirisYapButton(0, "Giriş Yap","android.widget.Button", "tr.com.argela.client.android.phone.wirofon",null),
-	HesapOlusturButton(0, "Hesap Oluştur", "android.widget.Button", "tr.com.argela.client.android.phone.wirofon",null), 
+	HesapOlusturButton(1, "Hesap Oluştur", "android.widget.Button", "tr.com.argela.client.android.phone.wirofon",null), 
+
+	//Hosgeldiniz Ekranlari
+	BuyukIlkHosgeldinizEkrani(0, null, "android.widget.ImageView", "tr.com.argela.client.android.phone.wirofon",null),
+	CloseIconHosgeldinizEkrani(2, null, "android.widget.ImageView", "tr.com.argela.client.android.phone.wirofon",null),
+
 	
 	//GirisYap Sayfasi 
 	GirisYapTextView(2, "Giriş Yap","android.widget.TextView", "tr.com.argela.client.android.phone.wirofon",null),
@@ -101,8 +106,6 @@ public enum Enumarations {
 	private String content_desc;
 
 	private Enumarations(int index, String text,String clas,String paket, String content_desc) {
-		
-		System.setProperty("file.encoding", "ISO-8859-1");
 		this.index = index;
 		this.text = text;
 		this.clas = clas;
@@ -110,23 +113,18 @@ public enum Enumarations {
 		this.content_desc = content_desc;
 	}
 	public int getIndex() {
-		System.setProperty("file.encoding", "ISO-8859-1");
 		return index;
 	}
 	public String getText() {
-		System.setProperty("file.encoding", "ISO-8859-1");
 		return text;
 	}
 	public String getClas() {
-		System.setProperty("file.encoding", "ISO-8859-1");
 		return clas;
 	}
 	public String getPackage() {
-		System.setProperty("file.encoding", "ISO-8859-1");
 		return paket;
 	}
 	public String getContent_desc() {
-		System.setProperty("file.encoding", "ISO-8859-1");
 		return content_desc;
 	}
 

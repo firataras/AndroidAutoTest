@@ -5,4 +5,4 @@
  * @author ismailfirataras
  *
  */
-package AppUtil;
+package com.argela.pages.message;
